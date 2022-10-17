@@ -1,0 +1,269 @@
+.plans {
+  background-color: #d3d3d3;
+  padding: 15px;
+  color: black;
+  margin-top: 55px !important;
+  .title {
+    margin-bottom: 30px;
+    position: relative;
+    .font {
+      width: 110px;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      left: 5px;
+    }
+    .font::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      background-color: black;
+      width: 40px;
+    }
+  }
+  .content {
+    .free {
+      background-color: white;
+      padding: 10px;
+      border-radius: 15px;
+      .head {
+        padding: 3px;
+        border: 1px #22c55e solid;
+        text-align: center;
+        margin-bottom: 20px;
+        .content {
+          padding-top: 20px;
+          background-color: #22c55e;
+          h2 {
+            color: white;
+            margin-bottom: 14px;
+          }
+          .price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+              color: white;
+              position: relative;
+              font-size: 30px;
+              margin-bottom: 25px;
+              i {
+                position: absolute;
+                font-size: 18px;
+                top: -10px;
+                left: -20px;
+              }
+            }
+          }
+        }
+      }
+      .body {
+        .text {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .true {
+            display: flex;
+            align-items: center;
+            i {
+              color: #22c55e;
+              margin-right: 7px;
+              font-size: 22px;
+            }
+            p {
+              margin-bottom: 0;
+              font-weight: 500;
+            }
+          }
+          .false {
+            display: flex;
+            align-items: center;
+            i {
+              color: #f44336;
+              margin-right: 7px;
+              font-size: 22px;
+            }
+            p {
+              margin-bottom: 0;
+              font-weight: 500;
+            }
+          }
+        }
+        .icon {
+          i {
+            color: #777;
+          }
+        }
+      }
+      .foot {
+        button {
+          font-size: 15px;
+        }
+      }
+    }
+    .basic {
+      background-color: white;
+      padding: 10px;
+      border-radius: 15px;
+      .head {
+        padding: 3px;
+        border: 1px #0075ff solid;
+        text-align: center;
+        margin-bottom: 20px;
+        .content {
+          padding-top: 20px;
+          background-color: #0075ff;
+          h2 {
+            color: white;
+            margin-bottom: 14px;
+          }
+          .price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+              color: white;
+              position: relative;
+              font-size: 30px;
+              margin-bottom: 25px;
+              i {
+                position: absolute;
+                font-size: 18px;
+                top: -10px;
+                left: -20px;
+              }
+            }
+          }
+        }
+      }
+      .body {
+        .text {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .true {
+            display: flex;
+            align-items: center;
+            i {
+              color: #22c55e;
+              margin-right: 7px;
+              font-size: 22px;
+            }
+            p {
+              margin-bottom: 0;
+              font-weight: 500;
+            }
+          }
+          .false {
+            display: flex;
+            align-items: center;
+            i {
+              color: #f44336;
+              margin-right: 7px;
+              font-size: 22px;
+            }
+            p {
+              margin-bottom: 0;
+              font-weight: 500;
+            }
+          }
+        }
+        .icon {
+          i {
+            color: #777;
+          }
+        }
+      }
+      .foot {
+        button {
+          font-size: 15px;
+        }
+      }
+    }
+    .premium {
+      background-color: white;
+      padding: 10px;
+      border-radius: 15px;
+      .head {
+        padding: 3px;
+        border: 1px #f59e0b solid;
+        text-align: center;
+        margin-bottom: 20px;
+        .content {
+          padding-top: 20px;
+          background-color: #f59e0b;
+          h2 {
+            color: white;
+            margin-bottom: 14px;
+          }
+          .price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+              color: white;
+              position: relative;
+              font-size: 30px;
+              margin-bottom: 25px;
+              i {
+                position: absolute;
+                font-size: 18px;
+                top: -10px;
+                left: -20px;
+              }
+            }
+          }
+        }
+      }
+      .body {
+        .text {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .true {
+            display: flex;
+            align-items: center;
+            i {
+              color: #22c55e;
+              margin-right: 7px;
+              font-size: 22px;
+            }
+            p {
+              margin-bottom: 0;
+              font-weight: 500;
+            }
+          }
+          .false {
+            display: flex;
+            align-items: center;
+            i {
+              color: #f44336;
+              margin-right: 7px;
+              font-size: 22px;
+            }
+            p {
+              margin-bottom: 0;
+              font-weight: 500;
+            }
+          }
+        }
+        .icon {
+          i {
+            color: #777;
+          }
+        }
+      }
+      .foot {
+        text-align: center;
+        color: #777;
+        font-weight: 500;
+      }
+    }
+    .hover {
+      transition: 0.4s;
+    }
+    .hover:hover {
+      box-shadow: 0px 0px 15px #dc3545;
+    }
+  }
+}

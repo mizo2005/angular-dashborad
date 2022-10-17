@@ -1,0 +1,226 @@
+.profile {
+  background-color: #d3d3d3;
+  padding: 15px;
+  color: black;
+  margin-top: 55px !important;
+  .title {
+    position: relative;
+    .font {
+      width: 110px;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      left: 5px;
+    }
+    .font::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      background-color: black;
+      width: 40px;
+    }
+  }
+  .content {
+    margin-top: 30px;
+
+    .box11 {
+      border-radius: 15px;
+      padding: 10px;
+      background-color: white;
+      margin-bottom: 20px;
+      .smbox {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        max-width: 130px;
+        .container {
+          text-align: center;
+          img {
+            margin-top: 10px;
+            width: 100px;
+            margin-bottom: 20px;
+          }
+          p {
+            margin-top: 10px;
+
+            color: #777;
+            font-size: 18px;
+          }
+          .progress {
+            margin-top: 10px;
+
+            margin-bottom: 20px;
+          }
+          .btns {
+            margin-top: 10px;
+
+            margin-bottom: 15px;
+            i {
+              color: gold;
+            }
+          }
+          span {
+            margin-top: 10px;
+
+            color: #777;
+          }
+        }
+      }
+      .bigbox {
+        margin-top: 20px;
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+          .title {
+            h3 {
+              color: #777;
+              margin-bottom: 6px;
+            }
+          }
+          .text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .sec1 {
+              p {
+                color: #777;
+              }
+              span {
+                color: black;
+              }
+            }
+            .sec2 {
+              p {
+                color: #777;
+              }
+              span {
+                color: black;
+              }
+            }
+            .sec3 {
+              p {
+                color: #777;
+              }
+              span {
+                color: black;
+              }
+            }
+          }
+          .btn {
+            .form-check {
+              font-size: 22px;
+            }
+          }
+          border-left: #d3d3d3 1px solid;
+          padding: 10px;
+        }
+        .box3 {
+          border-bottom: #d3d3d3 1px solid;
+        }
+        .box2 {
+          border-bottom: #d3d3d3 1px solid;
+          border-top: #d3d3d3 1px solid;
+        }
+        .box1:hover,
+        .box2:hover,
+        .box3:hover,
+        .box4:hover {
+          background-color: rgb(200, 200, 200);
+        }
+      }
+    }
+
+    .bigbox2 {
+      margin-top: 10px;
+      .box12 {
+        border-radius: 15px;
+        padding: 10px;
+        background-color: white;
+        margin-bottom: 20px;
+        .title {
+          h2 {
+            margin-bottom: 6px;
+          }
+          p {
+            color: #777;
+            font-weight: 500;
+          }
+        }
+        .text {
+          display: flex;
+
+          p {
+            background-color: #d3d3d3;
+            padding: 5px;
+            font-size: 16px;
+            margin-right: 5px;
+            border-radius: 7px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+      hr {
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+      .box13 {
+        border-radius: 15px;
+        padding: 10px;
+        background-color: white;
+        margin-bottom: 20px;
+        .title {
+          h2 {
+            margin-bottom: 6px;
+          }
+          p {
+            color: #777;
+            font-weight: 500;
+          }
+        }
+        .box,
+        .box0 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+          .text1 {
+            display: flex;
+            align-items: center;
+            img {
+              width: 70px;
+            }
+            h3 {
+              margin-bottom: 6px;
+              margin-top: 15px;
+            }
+            p {
+              color: #777;
+              font-weight: 500;
+              font-size: 16px;
+            }
+          }
+          .text2 {
+            margin-right: 10px;
+            span {
+              font-size: 16px;
+            }
+            p {
+              color: #777;
+              font-weight: 500;
+            }
+          }
+        }
+        .box0 {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+    .hover {
+      transition: 0.4s;
+    }
+    .hover:hover {
+      box-shadow: 0px 0px 15px #dc3545;
+    }
+  }
+}

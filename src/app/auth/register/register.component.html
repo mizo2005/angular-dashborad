@@ -1,0 +1,54 @@
+<div class="reg">
+  <div class="content">
+    <div class="text">
+      <h2>Register</h2>
+    </div>
+    <form (ngSubmit)="onSubmit()" #form="ngForm" [formGroup]="register">
+      <mat-form-field appearance="outline">
+        <mat-label>Both a label and a placeholder</mat-label>
+        <input
+          matInput
+          placeholder="Simple placeholder"
+          formControlName="username"
+        />
+      </mat-form-field>
+      <span [ngClass]="usernameerrorstyle">{{ usernameerror }}</span>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your password</mat-label>
+        <input
+          matInput
+          [type]="hide ? 'password' : 'text'"
+          formControlName="password"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+      <span [ngClass]="passworderrorstyle">{{ passworderror }}</span>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your email</mat-label>
+        <input
+          matInput
+          placeholder="pat@example.com"
+          required
+          formControlName="email"
+        />
+      </mat-form-field>
+      <span [ngClass]="emailerrorstyle">{{ emailerror }}</span>
+      <button type="submit" class="btn btn-success" [disabled]="disabled">
+        Register
+      </button>
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </form>
+    <div class="btn">
+      <h3>Already Regisred</h3>
+      <button class="btn btn-danger" routerLink="/login">Login</button>
+    </div>
+  </div>
+</div>

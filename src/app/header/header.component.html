@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="header">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid justify-sm-center">
+        <button
+          mat-icon-button
+          [matMenuTriggerFor]="menu"
+          aria-label="Example icon-button with a menu"
+          [style]="showbtn"
+          class="btn"
+        >
+          <mat-icon> format_list_bulleted</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" class="menu">
+          <button routerLink="dash-board" class="icon" mat-menu-item>
+            <mat-icon class="miniIcon">dashboard</mat-icon>
+            <span>Dash Board</span>
+          </button>
+          <button routerLink="settings" class="icon" mat-menu-item>
+            <mat-icon class="miniIcon">settings</mat-icon>
+            <span>Settings</span>
+          </button>
+          <button routerLink="profile" class="icon" mat-menu-item>
+            <mat-icon class="miniIcon">person_outline</mat-icon>
+            <span>Profile</span>
+          </button>
+          <button routerLink="projects" class="icon" mat-menu-item>
+            <mat-icon class="miniIcon">work_outline</mat-icon>
+            <span>Projects</span>
+          </button>
+          <button routerLink="courses" class="icon" mat-menu-item>
+            <mat-icon class="miniIcon">laptop_mac</mat-icon>
+            <span>Courses</span>
+          </button>
+          <button routerLink="friends" class="icon" mat-menu-item>
+            <mat-icon class="miniIcon">people</mat-icon>
+            <span>Friends</span>
+          </button>
+          <button routerLink="files" class="icon" mat-menu-item>
+            <mat-icon class="miniIcon"> insert_drive_file</mat-icon>
+            <span>Files</span>
+          </button>
+          <button routerLink="plans" class="icon" mat-menu-item>
+            <mat-icon class="miniIcon"> map</mat-icon>
+            <span>Plans</span>
+          </button>
+        </mat-menu>
+        <div class="content">
+          <div class="icon">
+            <i class="bi bi-search"></i>
+          </div>
+          <input class="search" type="text" />
+        </div>
+        <div class="center" [style]="margin">
+          <button (click)="logout()" class="btn btn-danger">Logout</button>
+          <span class="bell"><i class="bi bi-bell"></i></span>
+          <img routerLink="/profile" src="assets/image/avatar.png" alt="" />
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

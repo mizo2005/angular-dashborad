@@ -1,0 +1,19 @@
+<div class="row" *ngIf="auth">
+  <mat-drawer-container autosize class="example-container">
+    <mat-drawer
+      mode="side"
+      opened
+      class="d-sm-none d-lg-block d-md-block"
+      [style]="showdata"
+    >
+      <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-header></app-header>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
+<ng-container *ngIf="!auth">
+  <router-outlet></router-outlet>
+</ng-container>

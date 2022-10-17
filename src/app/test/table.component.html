@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="title">
+    <h2>Projects</h2>
+  </div>
+  <section class="example-container mat-elevation-z8" tabindex="0">
+    <mat-table [dataSource]="dataSource" *ngFor="let table of tables">
+      <ng-container matColumnDef="name">
+        <mat-header-cell class="headertab" *matHeaderCellDef>
+          Name
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="finishdata">
+        <mat-header-cell class="headertab" *matHeaderCellDef>
+          Finish Data
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{ element.finishdata }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="client">
+        <mat-header-cell class="headertab" *matHeaderCellDef>
+          Client
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.client }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="price">
+        <mat-header-cell class="headertab" *matHeaderCellDef>
+          price
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.price }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="team">
+        <mat-header-cell class="headertab" *matHeaderCellDef>
+          Team
+        </mat-header-cell>
+        <mat-cell class="d-flex" *matCellDef="let element">
+          <img src="{{ element.team[0] }}" alt="" />
+          <img src="{{ element.team[1] }}" alt="" />
+          <img src="{{ element.team[2] }}" alt="" />
+          <img src="{{ element.team[3] }}" alt="" />
+          <img src="{{ element.team[4] }}" alt="" />
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <mat-header-cell class="headertab" *matHeaderCellDef>
+          Status
+        </mat-header-cell>
+        <mat-cell class="status" *matCellDef="let element">
+          <button type="button" class="btn btn-success">
+            {{ element.status }}
+          </button>
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+  </section>
+</div>

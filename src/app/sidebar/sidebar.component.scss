@@ -1,0 +1,56 @@
+.container {
+  height: 100vh;
+  background-color: #f8f9fa;
+  .sidebar {
+    .title {
+      p {
+        color: black;
+      }
+      span {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: black;
+        display: flex;
+        position: relative;
+      }
+      span::before {
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 2px;
+        background-color: black;
+        left: 20px;
+        top: 8px;
+      }
+      span::after {
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 2px;
+        background-color: black;
+        right: 20px;
+        bottom: 7px;
+      }
+    }
+    .content {
+      li {
+        margin-top: 20px;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        width: 140px;
+        cursor: pointer;
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .active {
+    background-color: #2e2e2e;
+    color: white !important;
+    border-radius: 10px;
+  }
+}

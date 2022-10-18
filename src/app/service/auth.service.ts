@@ -19,8 +19,9 @@ export class AuthService {
         title: 'Username Is Already Registered!',
       });
     } else {
-      localStorage.setItem(this.username, 'client');
-      localStorage.setItem(this.password, '**********');
+      console.log(this.username);
+      localStorage.setItem(this.username, this.username);
+      localStorage.setItem(this.password, this.password);
       this.route.navigate(['login']);
       Swal.fire({
         position: 'top-end',

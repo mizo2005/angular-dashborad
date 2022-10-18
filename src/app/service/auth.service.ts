@@ -6,21 +6,22 @@ import Swal from 'sweetalert2';
   providedIn: 'root',
 })
 export class AuthService {
-  username: any;
+  usernames: any;
   password: any;
   logusername: any;
   logpassword: any;
 
   constructor(private route: Router) {}
   register() {
-    if ((this.username = localStorage.getItem(this.username))) {
+    if (localStorage.getItem(this.usernames)) {
       Swal.fire({
         icon: 'error',
         title: 'Username Is Already Registered!',
       });
     } else {
-      console.log(this.username);
-      localStorage.setItem(this.username, this.username);
+      console.log(this.usernames);
+      console.log(this.password);
+      localStorage.setItem(this.usernames, this.usernames);
       localStorage.setItem(this.password, this.password);
       this.route.navigate(['login']);
       Swal.fire({
@@ -46,10 +47,15 @@ export class AuthService {
         showConfirmButton: false,
         timer: 1500,
       });
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Unregster User Please Try Again',
+        showConfirmButton: true,
+      });
     }
   }
   logout() {
-    localStorage.removeItem('true');
     Swal.fire({
       title: 'Are you sure You Want To Logout?',
       icon: 'warning',
@@ -60,6 +66,7 @@ export class AuthService {
     }).then((result) => {
       if (result.isConfirmed) {
         this.route.navigate(['/login']);
+        localStorage.removeItem('true');
       } else {
         this.route.navigate(['/dash-board']);
       }

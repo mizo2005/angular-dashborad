@@ -24,16 +24,16 @@ export class RegisterComponent implements DoCheck {
       this.disabled = true;
     }
     if (
-      this.register.controls.username.dirty &&
-      this.register.controls.username.touched
+      this.register.controls.name.dirty &&
+      this.register.controls.name.touched
     ) {
       this.usernameerror = 'Username Must Be At Least 8 Current';
       this.usernameerrorstyle = 'red';
-      if (this.register.controls.username.valid) {
+      if (this.register.controls.name.valid) {
         this.usernameerror = 'Username Is Valid';
         this.usernameerrorstyle = 'green';
       }
-      if (this.register.controls.username.value === '') {
+      if (this.register.controls.name.value === '') {
         this.usernameerror = 'Username Is Required';
         this.usernameerrorstyle = 'white';
       }
@@ -71,10 +71,7 @@ export class RegisterComponent implements DoCheck {
   }
 
   register = new FormGroup({
-    username: new FormControl('', [
-      Validators.required,
-      Validators.minLength(8),
-    ]),
+    name: new FormControl('', [Validators.required, Validators.minLength(8)]),
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(8),
@@ -83,7 +80,10 @@ export class RegisterComponent implements DoCheck {
   });
 
   onSubmit() {
-    this.data.username = this.register.controls.username.value;
+    console.log(this.register.controls.name.value);
+    console.log(this.register.controls.password.value);
+
+    this.data.usernames = this.register.controls.name.value;
     this.data.password = this.register.controls.password.value;
     this.data.register();
   }
